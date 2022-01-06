@@ -2,7 +2,7 @@
 This repo contains the dotfiles with my custon configs along with documentation of the tools I use
 
 ## Tools of the Trade - Mac
-1. iTerm2
+1. [iTerm2](iTerm2)
 2. Lightshot - screenshots
 3. Rectangle - window management
 4. CopyClip - clipboard history
@@ -15,3 +15,10 @@ This repo contains the dotfiles with my custon configs along with documentation 
 1. Oh-my-zsh
 2. broot - file explorer
 3. byobu - terminal tmux session manager
+
+---
+
+## iTerm2
+* Good set up tips can be found [here](https://www.youtube.com/watch?v=0MiGnwPdNGE)
+** Main points are Quake style terminal (drop down from the top
+**
