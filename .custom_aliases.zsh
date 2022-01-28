@@ -3,6 +3,7 @@ alias work='cd ~/Documents/work/'
 alias personal='cd ~/Documents/personal'
 alias code='cd /Users/amihaio/Documents/work/code/voyantis'
 alias code2='cd /Users/amihaio/Documents/work/code2/voyantis'
+alias models='cd /Users/amihaio/Documents/work/vy-models'
 alias ls='ls -lGh'
 alias lsd='ls | grep ^d'
 alias k='k -h'
@@ -94,6 +95,10 @@ scp_from_ami() {
 
 scp_folder_from_ami() {
     scp -r -i ~/.ssh/NotebookServer.pem ubuntu@amihai-1.internal.voyantis.ai:$1 $2
+}
+
+scp_folder_to_ami() {
+    scp -r -i ~/.ssh/NotebookServer.pem $1 ubuntu@amihai-1.internal.voyantis.ai:$2
 }
 
 alias config='/usr/bin/git --git-dir=/Users/amihaio/.cfg/ --work-tree=/Users/amihaio'
