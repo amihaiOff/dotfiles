@@ -9,15 +9,15 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 4. CopyClip - clipboard history
 5. f.lux - blue light filter
 6. Sublime - text editor
-7. 
   
 
 ## Tools of the Trade - Terminal
 1. Oh-my-zsh
-2. broot - file explorer
+2. broot - file explorer (optional)
 3. byobu - terminal tmux session manager
 4. tldr - quick examples of how to use terminal commands
 5. cheet (similar to tldr, if I need to create my own tldr, this might the one to use)
+6. [exa](https://the.exa.website) - ls replacement tool. has icons that can be used with specific [fonts](https://www.nerdfonts.com) (e.g. caskaydia). custom_aliases should have an alias for `l`
 
 ---
 ---
@@ -31,5 +31,3 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 ## Lightshot
 * Can cancel cmd + shift + 4 as screen shot in MacOS and make shortcut for Lightshot 
   * This will also make the screenshot button on keychron keyboards work
-  * 
-    
