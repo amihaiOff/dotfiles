@@ -1,20 +1,19 @@
-alias up='cd ..'
 alias work='cd ~/Documents/work/'
 alias personal='cd ~/Documents/personal'
 alias code='cd /Users/amihaio/Documents/work/code/voyantis'
 alias code2='cd /Users/amihaio/Documents/work/code2/voyantis'
 alias models='cd /Users/amihaio/Documents/work/vy-models'
-alias ls='ls -lGh'
-alias lsd='ls | grep ^d'
-alias k='k -h'
 alias ssh_ami='ssh -i ~/.ssh/NotebookServer.pem ubuntu@amihai-1.internal.voyantis.ai'
-alias casp='cd /Users/amihaio/Documents/personal/ynab/caspion'
 alias trans_conv='python3 /Users/amihaio/PycharmProjects/ynab_transactions_converter/main.py'
 alias ip='curl ifconfig.me'
-
+alias l='exa -lah --git --no-user --icons --group-directories-first'
 
 lsg(){
 ls | grep $1
+}
+
+lt(){
+ exa -lahT -L $1 --git --icons --no-user --group-directories-first
 }
 
 #########################
