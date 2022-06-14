@@ -28,7 +28,7 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
   - Main points are Quake style terminal (dropdown from the top)
   - powerlevel 10K theme
 - Good iTerm2 tips can be found [here](https://stevenpcurtis.medium.com/make-your-life-easier-with-iterm2-a-terminal-replacement-343c08fc854f)
-- (To enable ctrl+F keys (for byobu))[https://apple.stackexchange.com/questions/281033/sending-ctrlfunction-key-on-iterm2]
+- [To enable ctrl+F keys (for byobu)](https://apple.stackexchange.com/questions/281033/sending-ctrlfunction-key-on-iterm2)
 
 ## Lightshot
 * Can cancel cmd + shift + 4 as screen shot in MacOS and make shortcut for Lightshot 
