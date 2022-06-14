@@ -36,4 +36,4 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 
 ## Karabiner
 - [Use karabiner for launching apps with shortcuts](https://www.tristanfarmer.dev/blog/using-karabiner-for-app-window-management)
-  - In order to launch vivaldi use the following command: `osascript -e 'ac    tivate application \"Vivaldi\"'`
+  - In order to launch vivaldi use the following command: `osascript -e 'activate application \"Vivaldi\"'`
