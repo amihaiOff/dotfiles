@@ -7,6 +7,11 @@ alias ssh_ami='ssh -i ~/.ssh/NotebookServer.pem ubuntu@amihai-1.internal.voyanti
 alias trans_conv='python3 /Users/amihaio/PycharmProjects/ynab_transactions_converter/main.py'
 alias ip='curl ifconfig.me'
 alias l='exa -lah --git --no-user --icons --group-directories-first'
+alias instances='bat ~/aws_instances'
+
+fp(){
+  readlink -f $1
+}
 
 lsg(){
 ls | grep $1
