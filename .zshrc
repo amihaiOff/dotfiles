@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
-   export EDITOR='subl'
+   export EDITOR='vim'
  fi
 
 # Compilation flags
@@ -140,4 +140,4 @@ source ~/.custom_aliases.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-eval $(thefuck --alias)
+export EXA_COLORS="*.csv=36:*.parquet=32"

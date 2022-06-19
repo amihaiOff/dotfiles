@@ -8,6 +8,7 @@ alias trans_conv='python3 /Users/amihaio/PycharmProjects/ynab_transactions_conve
 alias ip='curl ifconfig.me'
 alias l='exa -lah --git --no-user --icons --group-directories-first'
 alias instances='bat ~/aws_instances'
+alias bc='bat ~/byobu_cheat_sheet'
 
 fp(){
   readlink -f $1

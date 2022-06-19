@@ -209,12 +209,11 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "command + r = preview",
+                                "description": "caps + r = preview",
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command",
                                             "right_command",
                                             "right_control",
                                             "right_shift",
