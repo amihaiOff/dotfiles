@@ -9,13 +9,14 @@ alias ip='curl ifconfig.me'
 alias l='exa -lah --git --no-user --icons --group-directories-first'
 alias instances='bat ~/aws_instances'
 alias bc='bat ~/byobu_cheat_sheet'
+alias v='vim'
 
 fp(){
   readlink -f $1
 }
 
 lsg(){
-ls | grep $1
+l | grep $1
 }
 
 lt(){

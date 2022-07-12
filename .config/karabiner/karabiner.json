@@ -289,12 +289,11 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "option + t = notes",
+                                "description": "caps + z = zoom",
                                 "from": {
-                                    "key_code": "t",
+                                    "key_code": "z",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_option",
                                             "right_command",
                                             "right_control",
                                             "right_shift",
@@ -304,7 +303,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a notes"
+                                        "shell_command": "open -a zoom.us"
                                     }
                                 ],
                                 "type": "basic"
