@@ -23,6 +23,10 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 ---
 ---
 
+## Vim
+- colorscheme - [everforest](https://github.com/sainnhe/everforest) (via plug in)
+- statusbar - [airline](https://github.com/vim-airline/vim-airline)
+
 ## iTerm2
 - Good set up tips can be found [here](https://www.youtube.com/watch?v=0MiGnwPdNGE)
   - Main points are Quake style terminal (dropdown from the top)
