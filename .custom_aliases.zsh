@@ -10,6 +10,11 @@ alias l='exa -lah --git --no-user --icons --group-directories-first'
 alias instances='bat ~/aws_instances'
 alias bc='bat ~/byobu_cheat_sheet'
 alias v='vim'
+alias config='/usr/bin/git --git-dir=/Users/amihaio/.cfg/ --work-tree=/Users/amihaio'
+
+file_watch(){
+	watch -n 0.2 cat $1
+}
 
 fp(){
   readlink -f $1
@@ -107,4 +112,3 @@ scp_folder_to_ami() {
     scp -r -i ~/.ssh/NotebookServer.pem $1 ubuntu@amihai-1.internal.voyantis.ai:$2
 }
 
-alias config='/usr/bin/git --git-dir=/Users/amihaio/.cfg/ --work-tree=/Users/amihaio'
