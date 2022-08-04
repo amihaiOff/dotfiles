@@ -1,4 +1,5 @@
 alias work='cd ~/Documents/work/'
+alias pdp='cd ~/Documents/work/pdpipe_proj/pdpipe'
 alias personal='cd ~/Documents/personal'
 alias code='cd /Users/amihaio/Documents/work/code/voyantis'
 alias code2='cd /Users/amihaio/Documents/work/code2/voyantis'
