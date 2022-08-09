@@ -36,6 +36,10 @@ set wrap
 " visual autocomplete for command menu "
 set wildmenu
 
+" open splits on the right
+set splitright
+
+
 " ---------------------------------------------------------------------------------
 " ---------------------------------------------------------------------------------
 
@@ -49,7 +53,7 @@ if !has('gui running')
 endif
 """
 "
-" move a line of text using ALT+[jk] or Command+[jk] on mac"
+" move a line of ctext using ALT+[jk] or Command+[jk] on mac"
 "nmap <M-j> mz:m+<cr>`z
 "nmap <M-k> mz:m-2<cr>`z
 "vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
@@ -82,6 +86,8 @@ Plug 'preservim/nerdtree'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'preservim/tagbar'  " create tags for file structure view
+Plug 'tpope/vim-surround'  " press cs[\" inside [yo dude] to get \"yo dude\" 
 call plug#end()
 
 set background=dark
@@ -100,7 +106,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <leader>f :NERDTreeFind<cr>
 
 
-" ==== ale configuration ====
+" === ale configuration ===
 let g:ale_lint_on_text_changed = 1
 let g:ale_lint_on_save = 1
 
@@ -121,6 +127,13 @@ nmap <silent> gi <Plug>(coc-definition)
 " Use D to show documentation in preview window
 nnoremap <silent> D :call <SID>show_documentation()<CR>
 
+" ===NERDTree config ===
+let NERDTreeShowHidden=1
+
+
+" === TagBar config ==
+map <C-T> L TagBarToggle fc<CR>
+
 function! s:show_documentation()
     if (index(['vim', 'help'], &filetype) >= 0)
         execute 'h '.expand('<cword>')
@@ -128,3 +141,6 @@ function! s:show_documentation()
         call CocAction('doHover')
     endif
 endfunction
+
+" === macros ===
+let @a = "bi'€kD€ýaea'€ýa"

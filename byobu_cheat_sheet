@@ -20,6 +20,8 @@ NDINGS
 
        F12 -  Lock this terminal
 
+	   shift-F12 - Move between local and remote byobu
+
        shift-F2 - Split the screen horizontally
 
        ctrl-F2 - Split the screen vertically
