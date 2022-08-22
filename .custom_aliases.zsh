@@ -40,10 +40,19 @@ add_home_ip(){
     --tag-specifications ResourceType='security-group-rule',"Tags"="[{"Key"="id", "Value"="amihai"}]"
 }
 
+add_home_ip_comet(){
+	aws ec2 authorize-security-group-ingress \
+    --group-name k8s-default-cometmli-8453cca90a \
+    --ip-permissions IpProtocol=tcp,FromPort=443,ToPort=443,IpRanges="[{CidrIp=$1/32,Description='Amihai home'}]" \
+    --tag-specifications ResourceType='security-group-rule',"Tags"="[{"Key"="id", "Value"="amihai"}]"
+}
+
+
 add_home_ips(){
     ip=`curl -s ifconfig.me`
 	add_home_ip $ip 22
 	add_home_ip $ip 9997
+    add_home_ip_comet $ip
 }
 
 remove_home_ips(){
@@ -59,9 +68,19 @@ remove_ip(){
     --cidr $1
 }
 
+
+remove_ip_comet(){
+	aws ec2 revoke-security-group-ingress \
+    --group-name nk8s-default-cometmli-8453cca90a \
+    --protocol tcp \
+    --port $2 \
+    --cidr $1
+}
+
 remove_home_ips_helper(){
 	remove_ip $1 22
 	remove_ip $1 9997
+	remove_ip_comet $1 443
 }
 
 remove_and_add_ip(){
@@ -78,7 +97,7 @@ export datauploader="i-00afe9ad9d378444d"
 
 source /Users/amihaio/Documents/work/change_ec2_instance_type.sh
 ami_change() {
-   change_ec2_instance_type -i $ami1 -t $1
+   change_ec2_instance_type -r -i $ami1 -t $1
 }
 
 ami_start() {

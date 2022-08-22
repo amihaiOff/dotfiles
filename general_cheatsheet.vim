@@ -79,8 +79,14 @@ CMD-SHIFT-F12   hide all side panels
 CMD-E 	 		recent edited files
 CMD-up 			file navigation\create new files
 CMD-SHIFT-v		clipboard history
+OPT-d 			quikclist deployment
+CTRL-p			parameter list
 
 
+" === Pycharm custom ===
+OPT-g 			quikclist git
+set CTRL-j 		Down
+set CTRL-k		Up
 
 " "nnoremap <c-/> :action FindInPath<CR>
 "nnoremap <c-a> :action GotoAction<CR>
