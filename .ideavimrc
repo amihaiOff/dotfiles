@@ -2,8 +2,10 @@
 source ~/.vimrc
 
 " macros
-let @p = 'f,a<CR><Esc>'
-let @u = 'A:<CR><Esc>'
+let @p='f,a<CR><Esc>'
+let @u='A:<CR><Esc>'
+let @y='I:'
+
 let mapleader="\\"
 
 set ideajoin

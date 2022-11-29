@@ -81,6 +81,8 @@ CMD-up 			file navigation\create new files
 CMD-SHIFT-v		clipboard history
 OPT-d 			quikclist deployment
 CTRL-p			parameter list
+OPT-TAB			move between splits
+OPT-F12			open Terminal
 
 
 " === Pycharm custom ===

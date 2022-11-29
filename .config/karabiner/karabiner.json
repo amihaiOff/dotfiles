@@ -189,6 +189,27 @@
                                 "type": "basic"
                             },
                             {
+                                "description": "caps + o = obsidian",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a obsidian"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+ 
+                            {
                                 "description": "caps + t = iterm",
                                 "from": {
                                     "key_code": "t",

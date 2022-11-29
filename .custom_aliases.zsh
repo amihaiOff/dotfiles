@@ -29,6 +29,10 @@ lt(){
  exa -lahT -L $1 --git --icons --no-user --group-directories-first
 }
 
+print_csv(){
+ column -s, -t < $1 | less -#5 -N -S    
+}
+
 #########################
 ## AWS security groups ##
 #########################

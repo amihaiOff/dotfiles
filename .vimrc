@@ -143,4 +143,6 @@ function! s:show_documentation()
 endfunction
 
 " === macros ===
+" surround with '
 let @a = "bi'€kD€ýaea'€ýa"
+" delete (D) function parameter
