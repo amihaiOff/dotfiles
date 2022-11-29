@@ -19,6 +19,8 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 4. tldr - quick examples of how to use terminal commands
 5. cheet (similar to tldr, if I need to create my own tldr, this might the one to use)
 6. [exa](https://the.exa.website) - ls replacement tool. has icons that can be used with specific [fonts](https://www.nerdfonts.com) (e.g. caskaydia). custom_aliases should have an alias for `l`
+7. [starship](https://starship.rs) - package for customizing termianl prompt
+8. [fig](https://fig.io) - graphical autocomplete, dotfile management, plugins etc... a whole new terminal (graphical) experience
 
 ---
 ---
@@ -30,7 +32,7 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 ## iTerm2
 - Good set up tips can be found [here](https://www.youtube.com/watch?v=0MiGnwPdNGE)
   - Main points are Quake style terminal (dropdown from the top)
-  - powerlevel 10K theme
+  - powerlevel 10K theme (doesn't work with starship - this is also a prompt manager)
 - Good iTerm2 tips can be found [here](https://stevenpcurtis.medium.com/make-your-life-easier-with-iterm2-a-terminal-replacement-343c08fc854f)
 - [To enable ctrl+F keys (for byobu)](https://apple.stackexchange.com/questions/281033/sending-ctrlfunction-key-on-iterm2)
 
@@ -49,4 +51,5 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 
 ## Other
 - <ins>aws_instances</ins> - lists the instance names of ec2 machines and their respective cpus count and memory. Should be given an alias to print to terminal
-- <ins>byobu_cheat_sheet</ins> - command list for byobu. Should be given an alias to print to terminal
+- <ins>byobu_cheat_sheet</ins> - command list for byobu. Should be given an alias to print to terminal.
+- <ins>general_cheatsheet.vim</ins> - a command list for vim/pycharm/others - trying to combine all shortcuts in one
