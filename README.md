@@ -41,6 +41,11 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 ## Karabiner
 - [Use karabiner for launching apps with shortcuts](https://www.tristanfarmer.dev/blog/using-karabiner-for-app-window-management)
   - In order to launch vivaldi use the following command: `osascript -e 'activate application \"Vivaldi\"'`
+### Complex Modification
+- Change left_shift+space to underscore(_)
+- CapsLock to Hyper
+- Hyper Application
+- Left ctrl + hjkl to arrow keys Vim
 
 ## Other
 - <ins>aws_instances</ins> - lists the instance names of ec2 machines and their respective cpus count and memory. Should be given an alias to print to terminal
