@@ -53,3 +53,7 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 - <ins>aws_instances</ins> - lists the instance names of ec2 machines and their respective cpus count and memory. Should be given an alias to print to terminal
 - <ins>byobu_cheat_sheet</ins> - command list for byobu. Should be given an alias to print to terminal.
 - <ins>general_cheatsheet.vim</ins> - a command list for vim/pycharm/others - trying to combine all shortcuts in one
+
+## System wide vim
+I tried vim mode plus but it confilcts with caps -> escape and doens't have things like `wid`. For now using left ctrl + hjkl which I can
+combine with `option` key to skip words or with shift to highlight words. 
