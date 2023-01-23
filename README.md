@@ -25,6 +25,9 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 ---
 ---
 
+## Brewfile
+This file lists a bunch of tools to download and install. Run with `brew bundle --global` (after installing brew)
+
 ## Vim
 - colorscheme - [everforest](https://github.com/sainnhe/everforest) (via plug in)
 - statusbar - [airline](https://github.com/vim-airline/vim-airline)

@@ -1,0 +1,26 @@
+# run with brew bundle --global
+
+
+cask_args appdir: '~/Applications', require_sha: true
+
+
+CLI Essentials
+brew 'git'          # Version controll
+brew 'ranger'       # Directory browser
+brew 'tmux'         # Term multiplexer
+
+# CLI Basics
+brew 'bat'          # Output highlighting (better cat)
+brew 'broot'        # Interactive directory navigation
+brew 'duf'          # Get info on mounted disks (better df)
+brew 'exa'          # Listing files with info (better ls)
+brew 'fzf'          # Fuzzy file finder and filtering
+brew 'jdupes'       # Duplicate file finder
+brew 'procs'        # Advanced process viewer (better ps)
+brew 'ripgrep'      # Searching within files (better grep)
+brew 'thefuck'      # Auto-correct miss-typed commands
+brew 'tldr'         # Community-maintained docs (better man)
+brew 'tree'         # Directory listings as tree structure
+brew 'trash-cli'    # Record and restore removed files
+brew 'watch'        # Run commands periorically
+brew 'xsel'         # Copy paste access to the X clipboard
