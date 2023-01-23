@@ -122,6 +122,7 @@ if [[ -n $SSH_CONNECTION ]]; then
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
+eval $(thefuck --alias)
 
 export FZF_BASE="/Users/amihaio/.oh-my-zsh/custom/plugins/fzf-zsh"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"

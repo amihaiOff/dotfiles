@@ -21,7 +21,7 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 6. [exa](https://the.exa.website) - ls replacement tool. has icons that can be used with specific [fonts](https://www.nerdfonts.com) (e.g. caskaydia). custom_aliases should have an alias for `l`
 7. [starship](https://starship.rs) - package for customizing termianl prompt
 8. [fig](https://fig.io) - graphical autocomplete, dotfile management, plugins etc... a whole new terminal (graphical) experience
-
+9. byobu_setup.sh - bash script to setup terminal byobu session. Opens a session with two windows, one for local and one for remote. 
 ---
 ---
 
