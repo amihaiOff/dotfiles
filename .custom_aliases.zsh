@@ -13,6 +13,15 @@ alias bc='bat ~/byobu_cheat_sheet'
 alias v='vim'
 alias config='/usr/bin/git --git-dir=/Users/amihaio/.cfg/ --work-tree=/Users/amihaio'
 
+
+voyantis_env_vars(){
+    export PYTHONPATH=src
+    export ENV_NAME=staging
+    export STAGING_NAME=stagenv1
+    export APP_NAME=$1
+}
+
+
 file_watch(){
 	watch -n 0.2 cat $1
 }

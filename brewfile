@@ -3,8 +3,18 @@
 
 cask_args appdir: '~/Applications', require_sha: true
 
+# Taps
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/services'
+tap 'blacktop/tap'
+tap 'browsh-org/homebrew-browsh'
+tap 'espanso/espanso'
+tap 'jesseduffield/lazygit'
+tap 'koekeishiya/formulae'
 
 CLI Essentials
+
 brew 'git'          # Version controll
 brew 'ranger'       # Directory browser
 brew 'tmux'         # Term multiplexer

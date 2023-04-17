@@ -60,3 +60,13 @@ This file lists a bunch of tools to download and install. Run with `brew bundle 
 ## System wide vim
 I tried vim mode plus but it confilcts with caps -> escape and doens't have things like `wid`. For now using left ctrl + hjkl which I can
 combine with `option` key to skip words or with shift to highlight words. 
+
+## PyCharm plugins
+- ideavim
+- copilot
+- sourcery
+- atom material icons
+- material theme UI
+- One dark theme
+- tab shifter (might not be in use)
+- forest night (might not be in use)
