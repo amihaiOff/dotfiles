@@ -1,10 +1,11 @@
 "" Source your .vimrc
 source ~/.vimrc
 
-" macros
-let @p='f,a<CR><Esc>'
-let @u='A:<CR><Esc>'
-let @y='I:'
+" macros)
+let @p='f,a<CR><Esc>' " reorg function params to have one line each (apply according to number of params)
+let @u='A:<CR><Esc>'  " add colon to end of line
+let @y='I:' " add colon to beginning of line
+let @b='a(<Esc>A)<Esc>' " surround with brackets
 
 let mapleader="\\"
 
@@ -116,4 +117,3 @@ set ReplaceWithRegister
 set commentary
 set easymotion
 " Find more examples here: https://jb.gg/share-ideavimrc
-

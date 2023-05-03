@@ -144,3 +144,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export EXA_COLORS="*.csv=36:*.parquet=32"
 
 eval "$(starship init zsh)"
+
+# for poetry
+export PATH="/Users/amihaio/.local/bin:$PATH"
