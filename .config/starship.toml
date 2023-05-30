@@ -19,13 +19,13 @@ $character
 symbol = " "
 
 [directory]
-style = "bold blue"
+style = "blue"
 format = "[ $path ]($style)"
 read_only = " "
 truncation_length = 7 
 truncation_symbol = "…/"
 truncate_to_repo = false
-repo_root_style = 'bold green'
+repo_root_style = 'bold blue'
 
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
