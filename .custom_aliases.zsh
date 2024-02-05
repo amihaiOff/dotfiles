@@ -42,70 +42,12 @@ print_csv(){
  column -s, -t < $1 | less -#5 -N -S    
 }
 
-#########################
-## AWS security groups ##
-#########################
-
-add_home_ip(){
-	aws ec2 authorize-security-group-ingress \
-    --group-name notebook-server \
-    --ip-permissions IpProtocol=tcp,FromPort=$2,ToPort=$2,IpRanges="[{CidrIp=$1/32,Description='Amihai home'}]" \
-    --tag-specifications ResourceType='security-group-rule',"Tags"="[{"Key"="id", "Value"="amihai"}]"
-}
-
-add_home_ip_comet(){
-	aws ec2 authorize-security-group-ingress \
-    --group-name k8s-default-cometmli-8453cca90a \
-    --ip-permissions IpProtocol=tcp,FromPort=443,ToPort=443,IpRanges="[{CidrIp=$1/32,Description='Amihai home'}]" \
-    --tag-specifications ResourceType='security-group-rule',"Tags"="[{"Key"="id", "Value"="amihai"}]"
-}
-
-
-add_home_ips(){
-    ip=`curl -s ifconfig.me`
-	add_home_ip $ip 22
-	add_home_ip $ip 9997
-    add_home_ip_comet $ip
-}
-
-remove_home_ips(){
-  ids=$(aws ec2 describe-security-group-rules  --filters "Name=tag-value,Values=amihai")
-  echo $ids | grep "CidrI" | awk -F '"' '{print $4}' | while read -r line; do remove_home_ips_helper $line; done
-}
-
-remove_ip(){
-	aws ec2 revoke-security-group-ingress \
-    --group-name notebook-server \
-    --protocol tcp \
-    --port $2 \
-    --cidr $1
-}
-
-
-remove_ip_comet(){
-	aws ec2 revoke-security-group-ingress \
-    --group-name nk8s-default-cometmli-8453cca90a \
-    --protocol tcp \
-    --port $2 \
-    --cidr $1
-}
-
-remove_home_ips_helper(){
-	remove_ip $1 22
-	remove_ip $1 9997
-	remove_ip_comet $1 443
-}
-
-remove_and_add_ip(){
-  remove_home_ips
-  add_home_ips
- }
 
 ######################
 ## AWS EC2 commands ##
 ######################
 
-export ami1="i-083cc858c4373aaf6"
+export ami1="i-07ae8bd8c976f22d5"
 export datauploader="i-00afe9ad9d378444d"
 
 source /Users/amihaio/Documents/work/change_ec2_instance_type.sh

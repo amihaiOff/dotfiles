@@ -147,3 +147,6 @@ eval "$(starship init zsh)"
 
 # for poetry
 export PATH="/Users/amihaio/.local/bin:$PATH"
+
+# add Pulumi to the PATH
+export PATH=$PATH:/Users/amihaio/.pulumi/bin
