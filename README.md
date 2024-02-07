@@ -22,6 +22,10 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 7. [starship](https://starship.rs) - package for customizing termianl prompt
 8. [fig](https://fig.io) - graphical autocomplete, dotfile management, plugins etc... a whole new terminal (graphical) experience
 9. byobu_setup.sh - bash script to setup terminal byobu session. Opens a session with two windows, one for local and one for remote. 
+10. ZSH plugins installation
+  1. fzf-zsh - `git clone --depth 1 https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin`
+  2. zsh-autosuggestions - `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+  3. zsh-syntax-highlighting - `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 ---
 ---
 
