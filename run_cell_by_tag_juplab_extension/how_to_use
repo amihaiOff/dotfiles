@@ -1,2 +1,0 @@
-In order to use this extension use the npm pack command on the folder to make a tarball (tgz). 
-This can then be installed with juptyer labextension install

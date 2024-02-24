@@ -48,7 +48,7 @@ print_csv(){
 ## AWS EC2 commands ##
 ######################
 
-export ami1="i-07ae8bd8c976f22d5"
+export ami1="i-0b212f7f05433a409"
 export datauploader="i-00afe9ad9d378444d"
 
 source /Users/amihaio/Documents/work/change_ec2_instance_type.sh
