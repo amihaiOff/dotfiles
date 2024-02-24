@@ -1,0 +1,13 @@
+\.git
+\.gitignore
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+
+\extra
+
+.ideavimrc
+brewfile
+\.config\karabiner
