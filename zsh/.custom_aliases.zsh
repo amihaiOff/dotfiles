@@ -9,7 +9,7 @@ alias ssh_ami='ssh -i ~/.ssh/NotebookServer.pem ubuntu@amihai-ds-notebook.voyant
 alias trans_conv='python3 /Users/amihaio/PycharmProjects/ynab_transactions_converter/main.py'
 alias ip='curl ifconfig.me'
 alias l='exa -lah --git --no-user --icons --group-directories-first'
-alias instances='bat ~/aws_instances'
+alias instances='bat ~/extra/aws_instances'
 alias bc='bat ~/byobu_cheat_sheet'
 alias v='vim'
 alias config='/usr/bin/git --git-dir=/Users/amihaio/.cfg/ --work-tree=/Users/amihaio'
