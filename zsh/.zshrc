@@ -150,3 +150,12 @@ export PATH="/Users/amihaio/.local/bin:$PATH"
 
 # add Pulumi to the PATH
 export PATH=$PATH:/Users/amihaio/.pulumi/bin
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
