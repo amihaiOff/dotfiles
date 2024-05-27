@@ -84,3 +84,9 @@ combine with `option` key to skip words or with shift to highlight words.
 - One dark theme
 - tab shifter (might not be in use)
 - forest night (might not be in use)
+
+## Using stow for symlinks
+1. Create folder in this repo.
+2. Use `stow -t [target_folder] [source folder]`
+This will create a symlink for all files in source folder, in the target folder. Any additional files in targer folder will remain untouched. 
+For any file that already exists in the target folder the operation will fail. 
