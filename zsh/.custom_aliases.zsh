@@ -13,6 +13,7 @@ alias instances='bat ~/extra/aws_instances'
 alias bc='bat ~/byobu_cheat_sheet'
 alias v='vim'
 alias config='/usr/bin/git --git-dir=/Users/amihaio/.cfg/ --work-tree=/Users/amihaio'
+alias dotfiles='cd ~/dotfiles'
 
 
 voyantis_env_vars(){
@@ -68,23 +69,19 @@ ami_status(){
     aws ec2 describe-instance-status --instance-id $ami1
 }
 
-scp_to_notebook() {
-    scp -i ~/.ssh/NotebookServer.pem $1 ubuntu@notebook.internal.voyantis.ai:$2
-}
-
 scp_to_ami() {
-    scp -i ~/.ssh/NotebookServer.pem $1 ubuntu@amihai-1.internal.voyantis.ai:$2
+    scp -i ~/.ssh/NotebookServer.pem $1 ubuntu@amihai-ds-notebook.voyantis.co:$2
 }
 
 scp_from_ami() {
-    scp -i ~/.ssh/NotebookServer.pem ubuntu@amihai-1.internal.voyantis.ai:$1 $2
+    scp -i ~/.ssh/NotebookServer.pem ubuntu@amihai-ds-notebook.voyantis.co:$1 $2
 }
 
 scp_folder_from_ami() {
-    scp -r -i ~/.ssh/NotebookServer.pem ubuntu@amihai-1.internal.voyantis.ai:$1 $2
+    scp -r -i ~/.ssh/NotebookServer.pem ubuntu@amihai-ds-notebook.voyantis.co:$1 $2
 }
 
 scp_folder_to_ami() {
-    scp -r -i ~/.ssh/NotebookServer.pem $1 ubuntu@amihai-1.internal.voyantis.ai:$2
+    scp -r -i ~/.ssh/NotebookServer.pem $1 ubuntu@amihai-ds-notebook.voyantis.co:$2
 }
 
