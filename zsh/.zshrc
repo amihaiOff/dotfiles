@@ -76,25 +76,16 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
+plugins=(
+	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 	# k
 	zsh-z
 	#fzf
 	fzf-zsh-plugin
+	fzf-tab
 )
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-#export LANG=en_US.UTF-8  # this is for cnvrg - was commented out in original zshrc
-#export LANGUAGE=en_US.UTF-8  # this is for cnvrg
-#export LC_ALL=en_US.UTF-8  # this is for cnvrg
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -103,26 +94,30 @@ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+
+source $ZSH/oh-my-zsh.sh
+source /Users/amihaio/.config/broot/launcher/bash/br
+source ~/.custom_aliases.zsh
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8  # this is for cnvrg - was commented out in original zshrc
+export LANGUAGE=en_US.UTF-8  # this is for cnvrg
+export LC_ALL=en_US.UTF-8  # this is for cnvrg
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval $(thefuck --alias)
 
 export FZF_BASE="/Users/amihaio/.oh-my-zsh/custom/plugins/fzf-zsh"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
@@ -136,20 +131,18 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source /Users/amihaio/.config/broot/launcher/bash/br
-source ~/.custom_aliases.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export EXA_COLORS="*.csv=36:*.parquet=32"
 
-eval "$(starship init zsh)"
 
 # for poetry
 export PATH="/Users/amihaio/.local/bin:$PATH"
 
 # add Pulumi to the PATH
 export PATH=$PATH:/Users/amihaio/.pulumi/bin
+
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
@@ -159,3 +152,31 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# zsh history
+HISTSIZE=10000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+# have the command history take into account a given prefix
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+
+# make autocomplete not case sensitive
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# make autocomplete use fzf
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+
+
+eval "$(starship init zsh)"
+eval "$(pyenv init --path)"
+eval $(thefuck --alias)
+#eval "$(fzf --zsh)"

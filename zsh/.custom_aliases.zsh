@@ -14,6 +14,7 @@ alias bc='bat ~/byobu_cheat_sheet'
 alias v='vim'
 alias config='/usr/bin/git --git-dir=/Users/amihaio/.cfg/ --work-tree=/Users/amihaio'
 alias dotfiles='cd ~/dotfiles'
+alias cache='cd /Users/amihaio/Documents/work/cache'
 
 
 voyantis_env_vars(){
@@ -44,6 +45,24 @@ print_csv(){
  column -s, -t < $1 | less -#5 -N -S    
 }
 
+
+dbt_run() {
+    if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+        echo "Usage: [query model name] [customer] [product] [version]"
+        return 0
+    fi
+
+    local param1="$2"
+    local param2="$3"
+
+    # Convert to uppercase
+    p2=$(echo "$param2" | tr '[:lower:]' '[:upper:]')
+    p3=$(echo "$param3" | tr '[:lower:]' '[:upper:]')
+
+    export HTTPS_PROXY="http://snowflake-proxy.internal.voyantis.io:8448"
+    dbt run -s $1 --vars '{"CUSTOMER_DWH":"CUSTOMER_PROD_$p2_$p3", "CUSTOMER_DL":"CUSTOMER_PROD_$p2_$p3", "CUSTOMER": "$p2", "PRODUCT": "$p3", "VERSION": $4}'
+    unset HTTPS_PROXY
+}
 
 ######################
 ## AWS EC2 commands ##

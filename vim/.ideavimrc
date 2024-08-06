@@ -2,7 +2,7 @@
 source ~/.vimrc
 
 " macros)
-let @p='f,a<CR><Esc>' " reorg function params to have one line each (apply according to number of params)
+let @p='f,li<CR><Esc>' " reorg function params to have one line each (apply according to number of params)
 let @u='A:<CR><Esc>'  " add colon to end of line
 let @y='I:' " add colon to beginning of line
 let @b='a(<Esc>A)<Esc>' " surround with brackets
