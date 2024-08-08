@@ -35,6 +35,10 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
        ```
        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
        ```
+    7. zsh-z
+    8. fzf-zsh-plugin
+    9. fzf-tab
+    10. zsh-vi-mode
 11. [bpytop](https://github.com/aristocratos/bpytop) - great htop alternative
 ---
 ---

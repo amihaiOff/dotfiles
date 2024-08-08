@@ -60,7 +60,7 @@ dbt_run() {
     p3=$(echo "$param3" | tr '[:lower:]' '[:upper:]')
 
     export HTTPS_PROXY="http://snowflake-proxy.internal.voyantis.io:8448"
-    dbt run -s $1 --vars '{"CUSTOMER_DWH":"CUSTOMER_PROD_$p2_$p3", "CUSTOMER_DL":"CUSTOMER_PROD_$p2_$p3", "CUSTOMER": "$p2", "PRODUCT": "$p3", "VERSION": $4}'
+    dbt run -s $1 $5 --vars '{"CUSTOMER_DWH":"CUSTOMER_PROD_$p2_$p3", "CUSTOMER_DL":"CUSTOMER_PROD_$p2_$p3", "CUSTOMER": "$p2", "PRODUCT": "$p3", "VERSION": $4}'
     unset HTTPS_PROXY
 }
 
