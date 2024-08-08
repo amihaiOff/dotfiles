@@ -85,6 +85,7 @@ plugins=(
 	#fzf
 	fzf-zsh-plugin
 	fzf-tab
+	zsh-vi-mode
 )
 
 # Preferred editor for local and remote sessions
@@ -154,7 +155,7 @@ function yy() {
 }
 
 # zsh history
-HISTSIZE=10000
+HISTSIZE=100000
 HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
