@@ -8,7 +8,7 @@ alias ssh_ami='ssh -i ~/.ssh/NotebookServer.pem ubuntu@amihai-ds-notebook.voyant
 # 'ssh -i ~/.ssh/NotebookServer.pem ubuntu@amihai-notebook.internal.voyantis.ai'
 alias trans_conv='python3 /Users/amihaio/PycharmProjects/ynab_transactions_converter/main.py'
 alias ip='curl ifconfig.me'
-alias l='exa -lah --git --no-user --icons --group-directories-first'
+alias l='exa -lah  --no-user --icons --group-directories-first'
 alias instances='bat ~/extra/aws_instances'
 alias bc='bat ~/byobu_cheat_sheet'
 alias v='vim'
@@ -38,7 +38,7 @@ l | grep $1
 }
 
 lt(){
- exa -lahT -L $1 --git --icons --no-user --group-directories-first
+ exa -lahT -L $1  --icons --no-user --group-directories-first
 }
 
 print_csv(){
