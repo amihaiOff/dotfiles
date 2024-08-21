@@ -119,7 +119,7 @@ dbt_run() {
 export ami1="i-013cae967732eb308"
 export datauploader="i-00afe9ad9d378444d"
 
-source /Users/amihaio/Documents/work/change_ec2_instance_type.sh
+source $HOME/change_ec2_instance_type.sh
 ami_change() {
    change_ec2_instance_type -r -i $ami1 -t $1
 }
