@@ -1,23 +1,18 @@
 alias work='cd ~/Documents/work/'
-alias pdp='cd ~/Documents/work/pdpipe_proj/pdpipe'
 alias personal='cd ~/Documents/personal'
-alias code='cd /Users/amihaio/Documents/work/code/voyantis'
-alias code2='cd /Users/amihaio/Documents/work/code2/voyantis'
-alias models='cd /Users/amihaio/Documents/work/vy-models'
 alias ssh_ami='ssh -i ~/.ssh/NotebookServer.pem ubuntu@amihai-ds-notebook.voyantis.co'
-# 'ssh -i ~/.ssh/NotebookServer.pem ubuntu@amihai-notebook.internal.voyantis.ai'
-alias trans_conv='python3 /Users/amihaio/PycharmProjects/ynab_transactions_converter/main.py'
 alias ip='curl ifconfig.me'
 alias l='exa -lah  --no-user --icons --group-directories-first'
 alias instances='bat ~/extra/aws_instances'
 alias bc='bat ~/byobu_cheat_sheet'
 alias v='vim'
-alias config='/usr/bin/git --git-dir=/Users/amihaio/.cfg/ --work-tree=/Users/amihaio'
 alias dotfiles='cd ~/dotfiles'
 alias cache='cd /Users/amihaio/Documents/work/cache'
+alias b='bpytop'
 
 
 voyantis_env_vars(){
+    export AWS_DEFAULT_REGION=us-east-1
     export PYTHONPATH=src
     export ENV_NAME=staging
     export STAGING_NAME=stagenv1
