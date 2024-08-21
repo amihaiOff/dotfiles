@@ -9,7 +9,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/amihaio/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -80,13 +80,31 @@ plugins=(
 	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
-	# k
-	zsh-z
-	#fzf
+	z
 	fzf-zsh-plugin
 	fzf-tab
 	zsh-vi-mode
 )
+
+declare -A plugins_repos=(
+  [zsh-autosuggestions]="https://github.com/zsh-users/zsh-autosuggestions"
+  [zsh-syntax-highlighting]="https://github.com/zsh-users/zsh-syntax-highlighting"
+  [fzf-tab]="https://github.com/Aloxaf/fzf-tab"
+  [zsh-vi-mode]="https://github.com/jeffreytse/zsh-vi-mode"
+)
+
+# Automatically install missing plugins
+for plugin in "${(k)plugins_repos[@]}" 
+do
+  if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/$plugin" ]; then
+    if [ -n "${plugins_repos[$plugin]}" ]; then
+      echo "Installing $plugin from ${plugins_repos[$plugin]}..."
+      git clone "${plugins_repos[$plugin]}" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/$plugin"
+    else
+      echo "Skipping $plugin as no repository URL was provided."
+    fi
+  fi
+done
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -95,11 +113,8 @@ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  fi
 
-
 source $ZSH/oh-my-zsh.sh
-source /Users/amihaio/.config/broot/launcher/bash/br
 source ~/.custom_aliases.zsh
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -120,7 +135,7 @@ export LC_ALL=en_US.UTF-8  # this is for cnvrg
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
-export FZF_BASE="/Users/amihaio/.oh-my-zsh/custom/plugins/fzf-zsh"
+export FZF_BASE="/$HOME/.oh-my-zsh/custom/plugins/fzf-zsh"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -139,10 +154,10 @@ export EXA_COLORS="*.csv=36:*.parquet=32"
 
 
 # for poetry
-export PATH="/Users/amihaio/.local/bin:$PATH"
+export PATH="/$HOME/.local/bin:$PATH"
 
 # add Pulumi to the PATH
-export PATH=$PATH:/Users/amihaio/.pulumi/bin
+export PATH=$PATH:/$HOME/.pulumi/bin
 
 
 function yy() {
@@ -176,8 +191,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-
 eval "$(starship init zsh)"
 eval "$(pyenv init --path)"
-eval $(thefuck --alias)
 #eval "$(fzf --zsh)"
