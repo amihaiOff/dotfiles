@@ -9,10 +9,15 @@
 2.3.1 download tldr pages (how?)
 
 
-
 3. clone dotfiles
 3.2 install stow
 3.3 create links for everything 
 3.4 copy change_instance_type.sh to root
 
+
+4 install yazi
+4.1 in ubuntu - 
+4.1.1 install rust - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+4.1.2 enable cargo in shell -  . "$HOME/.cargo/env"
+4.1.3 install yazi - cargo install --locked yazi-fm yazi-cli
 
