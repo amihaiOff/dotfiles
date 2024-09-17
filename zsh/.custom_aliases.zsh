@@ -107,6 +107,21 @@ dbt_run() {
     unset HTTPS_PROXY
 }
 
+nohup_run() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: nohup_run <command>"
+        return 1
+    fi
+
+    # Remove existing nohup.out if it exists
+    [ -f nohup.out ] && rm nohup.out
+
+    # Run the command with nohup and &
+    nohup "$@" &
+
+    echo "Command started in background: $@"
+}
+
 ######################
 ## AWS EC2 commands ##
 ######################
