@@ -89,7 +89,7 @@ dbt_run() {
 
     # Add landing_start_date if provided
     if [ -n "$landing_start_date" ]; then
-        vars=$(echo $vars | sed 's/}$/,"LANDING_START_DATE":"'$landing_start_date'"}/')
+        vars=$(echo $vars | sed 's/}$/,"MIN_LANDING_START_DATE":"'$landing_start_date'"}/')
     fi
 
     # Add landing_end_date if provided

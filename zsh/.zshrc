@@ -76,14 +76,17 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 plugins=(
 	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 	z
 	fzf-zsh-plugin
-	fzf-tab
 	zsh-vi-mode
+	fzf-tab
 )
 
 declare -A plugins_repos=(
@@ -121,14 +124,6 @@ source ~/.custom_aliases.zsh
 export LANG=en_US.UTF-8  # this is for cnvrg - was commented out in original zshrc
 export LANGUAGE=en_US.UTF-8  # this is for cnvrg
 export LC_ALL=en_US.UTF-8  # this is for cnvrg
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 
@@ -190,7 +185,18 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # make autocomplete use fzf
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'echo  {}'
 
+zstyle ':completion:*:descriptions' format '[%d]'
+
+
+#eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(pyenv init --path)"
-#eval "$(fzf --zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6e7f80'
