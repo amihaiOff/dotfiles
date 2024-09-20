@@ -3,10 +3,8 @@ This repo contains the dotfiles with my custon configs along with documentation 
 A guide on how to use this repo can be found [here](https://www.atlassian.com/git/tutorials/dotfiles)
 
 ## Tools of the Trade - Mac
-1. [iTerm2](#iTerm2)
+2. Kitty
 2. [Lightshot](#Lightshot) - screenshots
-3. Rectangle - window management
-4. CopyClip - clipboard history
 5. f.lux - blue light filter
 6. Sublime - text editor
 7. karabiner - keybaord mappings
@@ -15,7 +13,6 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 ## Tools of the Trade - Terminal
 1. Oh-my-zsh
 2. yazi - need to see how to install on ubuntu
-3. byobu - terminal tmux session manager
 4. tldr - quick examples of how to use terminal commands
 5. cheet (similar to tldr, if I need to create my own tldr, this might the one to use)
 6. [exa](https://the.exa.website) - ls replacement tool. has icons that can be used with specific [fonts](https://www.nerdfonts.com) (e.g. caskaydia). custom_aliases should have an alias for `l`

@@ -211,26 +211,6 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "caps + t = iterm",
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_shift",
-                                            "right_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a iterm"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
                                 "description": "caps + r = preview",
                                 "from": {
                                     "key_code": "r",
@@ -271,9 +251,9 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "r = iTerm2",
+                                "description": "caps+t = kitty",
                                 "from": {
-                                    "key_code": "r",
+                                    "key_code": "t",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -285,7 +265,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a iTerm"
+                                        "shell_command": "open -a kitty"
                                     }
                                 ],
                                 "type": "basic"
@@ -293,7 +273,7 @@
                             {
                                 "description": "caps + v = vivaldi",
                                 "from": {
-                                    "key_code": "v",
+                                    "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
@@ -371,9 +351,9 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "t = iTerm2",
+                                "description": "i = iTerm2",
                                 "from": {
-                                    "key_code": "t",
+                                    "key_code": "i",
                                     "modifiers": {
                                         "mandatory": [
                                             "right_command",
