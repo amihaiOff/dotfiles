@@ -9,7 +9,20 @@ alias v='vim'
 alias dotfiles='cd ~/dotfiles'
 alias cache='cd /Users/amihaio/Documents/work/cache'
 alias b='bpytop'
+alias ssh='kitty +kitten ssh'
+alias aws_batch_checker='python3 ~/Documents/work/aws_batch_status_checker/aws-batch-job-status-checker.py'
+alias gen_shortcuts='glow ~/dotfiles/extra/general_shortcuts.md'
 
+
+add_batch_job(){
+    local arg1="$1"
+    local arg2="$2"
+
+    local file="/Users/amihaio/Documents/work/aws_batch_status_checker/jobs.txt" 
+
+    echo "$arg1 $arg2" >> "$file"
+
+}
 
 voyantis_env_vars(){
     export AWS_DEFAULT_REGION=us-east-1

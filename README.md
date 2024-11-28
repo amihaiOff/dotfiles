@@ -6,7 +6,6 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 2. Kitty
 2. [Lightshot](#Lightshot) - screenshots
 5. f.lux - blue light filter
-6. Sublime - text editor
 7. karabiner - keybaord mappings
   
 
@@ -36,6 +35,7 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
     9. fzf-tab
     10. zsh-vi-mode
 11. [bpytop](https://github.com/aristocratos/bpytop) - great htop alternative
+12. [charmbracelet/glow: Render markdown on the CLI, with pizzazz! 💅🏻](https://github.com/charmbracelet/glow) - Markdown reader
 ---
 ---
 
