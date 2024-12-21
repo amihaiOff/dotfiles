@@ -139,9 +139,6 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 # The next line enables shell command completion for gcloud.
 #if [ -f '/Users/amihai/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/amihai/google-cloud-sdk/completion.zsh.inc'; fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -202,4 +199,4 @@ export NVM_DIR="$HOME/.nvm"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6e7f80'
 
 # Add my utils package to PYTHONPATH
-export PYTHONPATH="/Users/amihaio/Documents/personal/my_utils/src:$PYTHONPATH"
+export PYTHONPATH="$HOME/my_utils/src:$PYTHONPATH"
