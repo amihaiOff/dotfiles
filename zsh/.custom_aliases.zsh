@@ -9,7 +9,7 @@ alias v='vim'
 alias dotfiles='cd ~/dotfiles'
 alias cache='cd /Users/amihaio/Documents/work/cache'
 alias b='bpytop'
-alias ssh='kitty +kitten ssh'
+# alias ssh='kitty +kitten ssh'
 alias aws_batch_checker='python3 ~/Documents/work/aws_batch_status_checker/aws-batch-job-status-checker.py'
 alias gen_shortcuts='glow ~/dotfiles/extra/general_shortcuts.md'
 
