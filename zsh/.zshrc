@@ -201,4 +201,4 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6e7f80'
 # Add my utils package to PYTHONPATH
 export PYTHONPATH="$HOME/my_utils/src:$PYTHONPATH"
 
-source ~/autovenv.plugin.zsh
+source ~/autovenv/autovenv.plugin.zsh

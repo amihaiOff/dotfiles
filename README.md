@@ -3,7 +3,7 @@ This repo contains the dotfiles with my custon configs along with documentation 
 A guide on how to use this repo can be found [here](https://www.atlassian.com/git/tutorials/dotfiles)
 
 ## Tools of the Trade - Mac
-2. Kitty
+1. Ghostty
 2. [Lightshot](#Lightshot) - screenshots
 5. f.lux - blue light filter
 7. karabiner - keybaord mappings
@@ -14,7 +14,7 @@ A guide on how to use this repo can be found [here](https://www.atlassian.com/gi
 2. yazi - need to see how to install on ubuntu
 4. tldr - quick examples of how to use terminal commands
 5. cheet (similar to tldr, if I need to create my own tldr, this might the one to use)
-6. [exa](https://the.exa.website) - ls replacement tool. has icons that can be used with specific [fonts](https://www.nerdfonts.com) (e.g. caskaydia). custom_aliases should have an alias for `l`
+6. [eza](https://the.exa.website) - ls replacement tool. has icons that can be used with specific [fonts](https://www.nerdfonts.com) (e.g. caskaydia). custom_aliases should have an alias for `l`
 7. [starship](https://starship.rs) - package for customizing termianl prompt
 9. byobu_setup.sh - bash script to setup terminal byobu session. Opens a session with two windows, one for local and one for remote. 
 10. ZSH plugins installation
