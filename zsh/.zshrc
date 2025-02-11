@@ -202,4 +202,4 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6e7f80'
 export PYTHONPATH="$HOME/my_utils:$PYTHONPATH"
 export PYTHONPATH="$HOME/.cargo/bin:$PYTHONPATH"
 
-source ~/Documents/work/autovenv/autovenv.plugin.zsh
+source ~/autovenv/autovenv.plugin.zsh
