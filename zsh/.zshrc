@@ -199,6 +199,7 @@ export NVM_DIR="$HOME/.nvm"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6e7f80'
 
 # Add my utils package to PYTHONPATH
-export PYTHONPATH="$HOME/my_utils/src:$PYTHONPATH"
+export PYTHONPATH="$HOME/my_utils:$PYTHONPATH"
+export PYTHONPATH="$HOME/.cargo/bin:$PYTHONPATH"
 
 source ~/Documents/work/autovenv/autovenv.plugin.zsh
