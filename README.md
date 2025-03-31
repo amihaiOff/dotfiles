@@ -1,9 +1,8 @@
 # dotfiles and tools of the trade repo 
 This repo contains the dotfiles with my custon configs along with documentation of the tools I use
-A guide on how to use this repo can be found [here](https://www.atlassian.com/git/tutorials/dotfiles)
 
 ## Tools of the Trade - Mac
-1. Ghostty
+1. Ghostty - terminal emulator
 2. [Lightshot](#Lightshot) - screenshots
 5. f.lux - blue light filter
 7. karabiner - keybaord mappings
@@ -50,7 +49,7 @@ This file lists a bunch of tools to download and install. Run with `brew bundle 
 - colorscheme - [everforest](https://github.com/sainnhe/everforest) (via plug in)
 - statusbar - [airline](https://github.com/vim-airline/vim-airline)
 
-## iTerm2
+## iTerm2 - deprecated
 - Good set up tips can be found [here](https://www.youtube.com/watch?v=0MiGnwPdNGE)
   - Main points are Quake style terminal (dropdown from the top)
   - powerlevel 10K theme (doesn't work with starship - this is also a prompt manager)
@@ -68,7 +67,7 @@ This file lists a bunch of tools to download and install. Run with `brew bundle 
 - Change left_shift+space to underscore(_)
 - CapsLock to Hyper
 - Hyper Application
-- Left ctrl + hjkl to arrow keys Vim
+- Left ctrl + hjkl to arrow keys Vim style
 
 ## Other
 - <ins>aws_instances</ins> - lists the instance names of ec2 machines and their respective cpus count and memory. Should be given an alias to print to terminal
