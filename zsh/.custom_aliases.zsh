@@ -27,9 +27,10 @@ add_batch_job(){
 voyantis_env_vars(){
     export AWS_DEFAULT_REGION=us-east-1
     export PYTHONPATH=src
-    export ENV_NAME=staging
-    export STAGING_NAME=stagenv1
-    export APP_NAME=$1
+    export ENV_NAME=prod
+    export APP_NAME=dummy
+    export VOYANTIS_LOGGER_DISABLE_ES=1
+    export VY_COMMON_LOGGER_DISABLE_ES=1
 }
 
 
