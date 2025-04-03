@@ -7,6 +7,8 @@
     "notebook.lineNumbers": "on",
     "editor.fontFamily": "Jetbrains mono",
     "editor.fontSize": 14,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 300,
     "errorLens.exclude": [
         "blank line contains"
     ],
@@ -51,7 +53,7 @@
                     "name": "Python Functions",
                     "scope": [
                         "entity.name.function.python",
-                        "meta.function.python",
+                        "meta.function.python"
                     ],
                     "settings": {
                         "foreground": "#87AF87"
@@ -63,7 +65,7 @@
                         "punctuation.definition.arguments.end.python",
                         "punctuation.definition.list.end.python",
                         "punctuation.definition.list.begin.python",
-                        "meta.function-call.python",
+                        "meta.function-call.python"
                     ],
                     "settings": {
                         "foreground": "#d1cece"
@@ -150,5 +152,6 @@
             ]
         }
     },
-    "workbench.editorLargeFileConfirmation": 100
+    "workbench.editorLargeFileConfirmation": 100,
+    "editor.lineNumbers": "relative"
 }
