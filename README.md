@@ -93,3 +93,6 @@ combine with `option` key to skip words or with shift to highlight words.
 2. Use `stow -t [target_folder] [source folder]`
 This will create a symlink for all files in source folder, in the target folder. Any additional files in targer folder will remain untouched. 
 For any file that already exists in the target folder the operation will fail. 
+
+## Cursor
+Create a symlink for settings.json and keybindings.json in ~/Library/Application Support/Cursor/User
