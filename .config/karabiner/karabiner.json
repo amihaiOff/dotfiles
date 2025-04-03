@@ -171,26 +171,6 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "caps + c = pycharm",
-                                "from": {
-                                    "key_code": "c",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_shift",
-                                            "right_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a pycharm"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
                                 "description": "caps + o = obsidian",
                                 "from": {
                                     "key_code": "o",
@@ -251,7 +231,27 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "caps+t = kitty",
+                                "description": "caps + c = cursor",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_shift",
+                                            "right_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a cursor"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "caps+t = ghostty",
                                 "from": {
                                     "key_code": "t",
                                     "modifiers": {
@@ -265,7 +265,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a kitty"
+                                        "shell_command": "open -a ghostty"
                                     }
                                 ],
                                 "type": "basic"

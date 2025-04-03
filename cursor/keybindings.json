@@ -79,5 +79,17 @@
     {
         "key": "alt+shift+f12",
         "command": "workbench.action.toggleZenMode"
+    },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.navigateEditorGroups"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward"
     }
 ]
