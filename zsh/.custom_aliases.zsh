@@ -13,6 +13,8 @@ alias gen_shortcuts='glow ~/dotfiles/extra/general_shortcuts.md'
 
 
 add_batch_job(){
+    # arg1 - job id
+    # arg2 - job name
     local arg1="$1"
     local arg2="$2"
 
@@ -21,6 +23,9 @@ add_batch_job(){
     echo "$arg1 $arg2" >> "$file"
 
 }
+
+
+
 
 voyantis_env_vars(){
     export AWS_DEFAULT_REGION=us-east-1
@@ -178,6 +183,26 @@ dotfiles_status() {
   
   # Return to the original directory
   cd "$current_dir"
+}
+
+
+list_functions() {
+  local file="${1:-${ZDOTDIR:-$HOME}/.custom_aliases.zsh}"
+
+  if [[ ! -f "$file" ]]; then
+    echo "File not found: $file"
+    return 1
+  fi
+
+  echo "Functions defined in $file:"
+  echo "------------------------"
+
+  # Parse the file to find function definitions
+  grep -E '^[[:space:]]*(function[[:space:]]+)?[a-zA-Z0-9_]+[[:space:]]*\(\)' "$file" |
+    sed -E 's/^[[:space:]]*(function[[:space:]]+)?([a-zA-Z0-9_]+)[[:space:]]*\(\).*/\2/' |
+    while read -r func_name; do
+      echo "- $func_name"
+    done
 }
 
 

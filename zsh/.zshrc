@@ -38,7 +38,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -50,7 +50,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -121,9 +121,9 @@ source ~/.custom_aliases.zsh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8  # this is for cnvrg - was commented out in original zshrc
-export LANGUAGE=en_US.UTF-8  # this is for cnvrg
-export LC_ALL=en_US.UTF-8  # this is for cnvrg
+# export LANG=en_US.UTF-8  # this is for cnvrg - was commented out in original zshrc
+# export LANGUAGE=en_US.UTF-8  # this is for cnvrg
+# export LC_ALL=en_US.UTF-8  # this is for cnvrg
 
 #export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 
@@ -133,17 +133,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export FZF_BASE="/$HOME/.oh-my-zsh/custom/plugins/fzf-zsh"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
-#if [ -f '/Users/amihai/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/amihai/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-#if [ -f '/Users/amihai/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/amihai/google-cloud-sdk/completion.zsh.inc'; fi
-
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export EXA_COLORS="*.csv=36:*.parquet=32"
-
 
 # for poetry
 export PATH="/$HOME/.local/bin:$PATH"
