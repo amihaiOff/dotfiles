@@ -1,14 +1,12 @@
-alias work='cd ~/Documents/work/'
-alias personal='cd ~/Documents/personal'
 alias ssh_ami='ssh -i ~/.ssh/NotebookServer.pem ubuntu@amihai-ds-notebook.voyantis.co'
 alias ip='curl ifconfig.me'
 alias l='exa -lah  --no-user --icons --group-directories-first'
 alias instances='bat ~/extra/aws_instances'
 alias bc='bat ~/byobu_cheat_sheet'
 alias v='vim'
-alias dotfiles='cd ~/dotfiles'
 alias cache='cd /Users/amihaio/Documents/work/cache'
 alias b='bpytop'
+alias lz='lazygit'
 # alias ssh='kitty +kitten ssh'
 alias aws_batch_checker='python3 ~/Documents/work/aws_batch_status_checker/aws-batch-job-status-checker.py'
 alias gen_shortcuts='glow ~/dotfiles/extra/general_shortcuts.md'
@@ -135,6 +133,53 @@ nohup_run() {
 
     echo "Command started in background: $@"
 }
+
+
+dotfiles_status() {
+  local dotfiles_dir="$HOME/dotfiles"  # Change this to your actual dotfiles directory
+  
+  # Check if directory exists
+  if [[ ! -d "$dotfiles_dir" ]]; then
+    echo "Dotfiles directory not found at $dotfiles_dir"
+    return 1
+  fi
+  
+  # Change to the dotfiles directory and save the current directory
+  local current_dir=$(pwd)
+  cd "$dotfiles_dir" || return 1
+  
+  # Make sure we're in a git repository
+  if ! git rev-parse --is-inside-work-tree &>/dev/null; then
+    echo "Not a git repository: $dotfiles_dir"
+    cd "$current_dir"
+    return 1
+  fi
+  
+  # Fetch the latest changes without merging them
+  git fetch origin &>/dev/null
+  
+  # Get current branch
+  local current_branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+  if [[ -z "$current_branch" ]]; then
+    current_branch="detached HEAD"
+  fi
+  
+  # Get ahead/behind counts for the current branch
+  local ahead_behind=$(git rev-list --left-right --count "origin/master...$current_branch")
+  local behind=$(echo "$ahead_behind" | awk '{print $1}')
+  local ahead=$(echo "$ahead_behind" | awk '{print $2}')
+  
+  echo "dotfiles (master): $ahead ahead, $behind behind"
+  
+  # Check for uncommitted changes
+  if ! git diff --quiet || ! git diff --staged --quiet; then
+    echo "You have uncommitted changes"
+  fi
+  
+  # Return to the original directory
+  cd "$current_dir"
+}
+
 
 ######################
 ## AWS EC2 commands ##

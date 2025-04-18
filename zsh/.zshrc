@@ -203,3 +203,5 @@ export PYTHONPATH="$HOME/my_utils:$PYTHONPATH"
 export PYTHONPATH="$HOME/.cargo/bin:$PYTHONPATH"
 
 source ~/autovenv/autovenv.plugin.zsh
+
+dotfiles_status
