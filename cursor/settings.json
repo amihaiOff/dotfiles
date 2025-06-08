@@ -11,6 +11,10 @@
     "editor.fontSize": 14,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
+    "[jupyter-notebook]": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 10000
+    },
     "workbench.editor.showTabs": "single",
     "errorLens.exclude": [
         "blank line contains"
