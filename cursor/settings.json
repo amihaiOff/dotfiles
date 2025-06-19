@@ -131,7 +131,7 @@
                 {
                     "scope": "comment",
                     "settings": {
-                        "foreground": "#59626f"
+                        "foreground": "#73808f"
                     }
                 },
                 {
@@ -161,5 +161,10 @@
     "notebook.output.scrolling": true,
     "flake8.args": [
         "--max-line-length=120"
-    ]
+    ],
+    "files.associations": {
+        "*.bqsql": "sql"
+    },
+    "database-client.autoSync": true,
+    "database-client.highlightSQLBlock": true
 }

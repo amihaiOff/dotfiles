@@ -197,3 +197,7 @@ export PYTHONPATH="$HOME/.cargo/bin:$PYTHONPATH"
 source ~/autovenv/autovenv.plugin.zsh
 
 dotfiles_status
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
