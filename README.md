@@ -39,6 +39,7 @@ This repo contains the dotfiles with my custon configs along with documentation 
 11. [bpytop](https://github.com/aristocratos/bpytop) - great htop alternative
 12. [charmbracelet/glow: Render markdown on the CLI, with pizzazz! 💅🏻](https://github.com/charmbracelet/glow) - Markdown reader
 13. dust - Rust based disk space analyzer. Requires `cargo` to install -- `cargo install du-dust`. Use -r to show tree top to bottom.
+14. atuin - a better command history tool
 ---
 ---
 
