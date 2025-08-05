@@ -194,10 +194,10 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6e7f80'
 export PYTHONPATH="$HOME/my_utils:$PYTHONPATH"
 export PYTHONPATH="$HOME/.cargo/bin:$PYTHONPATH"
 
-source ~/autovenv/autovenv.plugin.zsh
+source ~/autovenv.plugin.zsh
 
 dotfiles_status
 
-. "$HOME/.atuin/bin/env"
+# . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"

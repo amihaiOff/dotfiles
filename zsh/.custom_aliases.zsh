@@ -1,6 +1,6 @@
 alias ssh_ami='ssh -i ~/.ssh/NotebookServer.pem ubuntu@amihai-ds-notebook.voyantis.co'
 alias ip='curl ifconfig.me'
-alias l='exa -lah  --no-user --icons --group-directories-first'
+alias l='eza -lah  --no-user --icons --group-directories-first'
 alias instances='bat ~/extra/aws_instances'
 alias bc='bat ~/byobu_cheat_sheet'
 alias v='vim'

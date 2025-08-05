@@ -12,7 +12,6 @@ This repo contains the dotfiles with my custon configs along with documentation 
 1. Oh-my-zsh
 2. yazi - need to see how to install on ubuntu
 4. tldr - quick examples of how to use terminal commands
-5. cheet (similar to tldr, if I need to create my own tldr, this might the one to use)
 6. [eza](https://the.exa.website) - ls replacement tool. has icons that can be used with specific [fonts](https://www.nerdfonts.com) (e.g. caskaydia). custom_aliases should have an alias for `l`
 7. [starship](https://starship.rs) - package for customizing termianl prompt
 9. byobu_setup.sh - bash script to setup terminal byobu session. Opens a session with two windows, one for local and one for remote. 
@@ -40,6 +39,7 @@ This repo contains the dotfiles with my custon configs along with documentation 
 12. [charmbracelet/glow: Render markdown on the CLI, with pizzazz! 💅🏻](https://github.com/charmbracelet/glow) - Markdown reader
 13. dust - Rust based disk space analyzer. Requires `cargo` to install -- `cargo install du-dust`. Use -r to show tree top to bottom.
 14. atuin - a better command history tool
+15. lazygit - brew install lazygit
 ---
 ---
 
