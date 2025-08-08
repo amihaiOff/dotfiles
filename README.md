@@ -6,6 +6,7 @@ This repo contains the dotfiles with my custon configs along with documentation 
 2. [Lightshot](#Lightshot) - screenshots
 5. f.lux - blue light filter
 7. karabiner - keybaord mappings
+8. Raycast
   
 
 ## Tools of the Trade - Terminal
