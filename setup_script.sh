@@ -1,92 +1,102 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
-# Check if the script is running as root
-if [[ $EUID -ne 0 ]]; then
-  echo "This script must be run as root. Please use sudo." >&2
-  exit 1
+# Still need to manually add git ssh key and clone the dotfiles repo. Then after setup need to manually use stow to create the symlinks.
+
+set -e  # Exit if a command fails
+
+DRY_RUN=false
+if [[ "$1" == "--dry-run" ]]; then
+    DRY_RUN=true
+    echo "Running in DRY RUN mode — no changes will be made."
 fi
 
-# Install curl
-apt update && apt install curl -y
+# Function to run commands or just print them
+run_cmd() {
+    if [ "$DRY_RUN" = true ]; then
+        echo "[DRY RUN] $*"
+    else
+        eval "$@"
+    fi
+}
 
-# Update and upgrade the system
-apt update && apt upgrade -y
+# Detect OS
+OS="$(uname -s)"
+case "$OS" in
+    Darwin)
+        echo "Detected macOS"
+        IS_MAC=true
+        ;;
+    Linux)
+        echo "Detected Linux"
+        IS_MAC=false
+        ;;
+    *)
+        echo "Unsupported OS: $OS"
+        exit 1
+        ;;
+esac
 
-# Install vim
-apt install vim -y
+# macOS-specific installs
+if [ "$IS_MAC" = true ]; then
+    # Install Homebrew if missing
+    if ! command -v brew >/dev/null 2>&1; then
+        echo "Installing Homebrew..."
+        run_cmd '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+        run_cmd eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
+
+    # Ensure zsh is installed
+    if ! command -v zsh >/dev/null 2>&1; then
+        echo "Installing zsh..."
+        run_cmd brew install zsh
+    fi
+
+    echo "Installing macOS packages via brew..."
+    run_cmd brew install --cask arc karabiner-elements ghostty flux
+    run_cmd brew install starship atuin bpytop lazygit dust tldr eza bat trash-cli watch
+fi
+
+# Linux-specific installs
+if [ "$IS_MAC" = false ]; then
+    # Ensure zsh is installed
+    if ! command -v zsh >/dev/null 2>&1; then
+        echo "Installing zsh..."
+        run_cmd sudo apt update -y
+        run_cmd sudo apt install -y zsh
+    fi
+
+    echo "Installing Linux packages..."
+    run_cmd sudo apt update -y
+    run_cmd sudo apt install -y curl wget git unzip starship atuin bpytop lazygit \
+        dust tldr eza bat trash-cli watch
+fi
 
 # Install Oh My Zsh
-if [[ ! -d ~/.oh-my-zsh ]]; then
-  echo "Installing Oh My Zsh..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    echo "Installing Oh My Zsh..."
+    run_cmd RUNZSH=no CHSH=no KEEP_ZSHRC=yes \
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# Define Oh My Zsh custom plugins directory
-ZSH_CUSTOM=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
+# Install zsh plugins (no .zshrc edits)
+ZSH_PLUGIN_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins"
+run_cmd mkdir -p "$ZSH_PLUGIN_DIR"
 
-# Install Oh My Zsh plugins
-echo "Installing zsh plugins..."
-ZSH_PLUGINS=(
-  "zsh-users/zsh-syntax-highlighting"
-  "zsh-users/zsh-autosuggestions"
-  "rupa/z"
-  "travisjeffery/fzf-zsh-plugin"
-  "Aloxaf/fzf-tab"
-  "jeffreytse/zsh-vi-mode"
+declare -A PLUGINS=(
+    [fzf-zsh]="https://github.com/unixorn/fzf-zsh-plugin.git"
+    [zsh-syntax-highlighting]="https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    [zsh-z]="https://github.com/agkozak/zsh-z.git"
+    [fzf-tab]="https://github.com/Aloxaf/fzf-tab.git"
+    [zsh-vi-mode]="https://github.com/jeffreytse/zsh-vi-mode.git"
 )
 
-for plugin in $ZSH_PLUGINS; do
-  PLUGIN_NAME=${plugin##*/}
-  if [[ ! -d "$ZSH_CUSTOM/plugins/$PLUGIN_NAME" ]]; then
-    git clone https://github.com/$plugin $ZSH_CUSTOM/plugins/$PLUGIN_NAME
-  else
-    echo "$PLUGIN_NAME is already installed."
-  fi
+for plugin in "${!PLUGINS[@]}"; do
+    if [ ! -d "$ZSH_PLUGIN_DIR/$plugin" ]; then
+        echo "Installing $plugin..."
+        run_cmd git clone "${PLUGINS[$plugin]}" "$ZSH_PLUGIN_DIR/$plugin"
+    fi
 done
 
-# Add plugins to .zshrc if not already present
-PLUGINS_LINE=$(grep "^plugins=" ~/.zshrc || echo "plugins=(git)")
-for plugin in zsh-syntax-highlighting zsh-autosuggestions z fzf-zsh-plugin fzf-tab zsh-vi-mode; do
-  if ! echo "$PLUGINS_LINE" | grep -q "$plugin"; then
-    PLUGINS_LINE=${PLUGINS_LINE%)}" $plugin)"
-  fi
-done
-echo "$PLUGINS_LINE" > ~/.zshrc
 
-# Install exa
-apt install eza -y
+echo "Setup complete! Restart your terminal or run 'exec zsh'."
 
-# Install tldr
-apt install tldr -y
-
-# Install pyenv
-echo "Installing pyenv..."
-if [[ ! -d ~/.pyenv ]]; then
-  curl https://pyenv.run | bash
-  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-  echo 'command -v pyenv > /dev/null && eval "$(pyenv init --path)"' >> ~/.zshrc
-  echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
-fi
-
-# Install starship
-if ! command -v starship > /dev/null 2>&1; then
-  echo "Installing Starship..."
-  sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- -y
-fi
-
-# Add Starship to .zshrc if not present
-if ! grep -q "eval \"\$(starship init zsh)\"" ~/.zshrc; then
-  echo "eval \"\$(starship init zsh)\"" >> ~/.zshrc
-fi
-
-# Install stow
-apt install stow -y
-
-cd .config
-stow -t ~/.config .
-
-# Final message
-echo "Setup complete. Please restart your terminal or run 'source ~/.zshrc' to apply changes."
-
-cd ~
-git clone git@github.com:linnnus/autovenv.git
