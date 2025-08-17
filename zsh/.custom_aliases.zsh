@@ -22,7 +22,7 @@ l | grep $1
 }
 
 lt(){
- exa -lahT -L $1  --icons --no-user --group-directories-first
+ eza -lahT -L $1  --icons --no-user --group-directories-first
 }
 
 print_csv(){
