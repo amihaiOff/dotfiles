@@ -194,6 +194,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6e7f80'
 export PYTHONPATH="$HOME/my_utils:$PYTHONPATH"
 export PYTHONPATH="$HOME/.cargo/bin:$PYTHONPATH"
 
+# this env var enables jj to print its pretty graphs
+export PAGER="less -r"
+
 source ~/autovenv.plugin.zsh
 
 dotfiles_status
