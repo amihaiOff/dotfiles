@@ -5,8 +5,9 @@ alias v='vim'
 alias cache='cd /Users/amihaio/Documents/work/cache'
 alias b='bpytop'
 alias lz='lazygit'
-# alias ssh='kitty +kitten ssh'
 alias gen_shortcuts='glow ~/dotfiles/extra/general_shortcuts.md'
+alias dzyg='docker exec -it keen_shtern zsh'
+alias dai='docker exec -it dazzling_fermi zsh'
 
 
 file_watch(){
