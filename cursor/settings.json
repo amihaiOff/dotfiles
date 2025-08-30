@@ -36,14 +36,6 @@
         }
     },
     "editor.tokenColorCustomizations": {
-        "[One Monokai]": {
-            // "comments": "#59626f",
-            // "strings": "#98c379",
-            // "numbers": "#d19a66",
-            // "keywords": "#c678dd",
-            // "functions": "#61afef",
-            // "types": "#e5c07b",
-            // "variables": "#abb2bf",
             "textMateRules": [
                 {
                     "name": "Python Docstrings",
@@ -56,14 +48,17 @@
                         "comment.block.documentation.python"
                     ],
                     "settings": {
-                        "foreground": "#7F848D"
+                        "foreground": "#d1cece"
                     }
                 },
                 {
                     "name": "Python Functions",
                     "scope": [
                         "entity.name.function.python",
-                        "meta.function.python"
+                        "meta.function.python",
+                        "meta.function-call.generic.python",
+                        "meta.function-call.python",
+                        "meta.member.access.python"
                     ],
                     "settings": {
                         "foreground": "#87AF87"
@@ -75,6 +70,8 @@
                         "punctuation.definition.arguments.end.python",
                         "punctuation.definition.list.end.python",
                         "punctuation.definition.list.begin.python",
+                        "punctuation.definition.string.begin.python",
+                        "punctuation.definition.string.end.python",
                         "meta.function-call.python"
                     ],
                     "settings": {
@@ -158,11 +155,15 @@
                     "settings": {
                         "foreground": "#E8A3A3"
                     }
+                },
+                {
+                    "scope": "source.python",
+                    "settings": {
+                        "foreground": "#d0dadf",
+                    }
                 }
             ]
-        }
     },
-    "notebook.output.scrolling": true,
     "flake8.args": [
         "--max-line-length=120"
     ],
@@ -170,5 +171,6 @@
         "*.bqsql": "sql"
     },
     "database-client.autoSync": true,
-    "database-client.highlightSQLBlock": true
+    "database-client.highlightSQLBlock": true,
+    "notebook.output.scrolling": true
 }
