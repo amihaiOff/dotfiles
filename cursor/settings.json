@@ -1,7 +1,7 @@
 {
     "window.commandCenter": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "One Monokai",
+    "workbench.colorTheme": "JetBrains Darcula Theme",
     "editor.accessibilitySupport": "off",
     "cursor.cpp.enablePartialAccepts": true,
     "notebook.lineNumbers": "on",
@@ -172,5 +172,12 @@
     },
     "database-client.autoSync": true,
     "database-client.highlightSQLBlock": true,
-    "notebook.output.scrolling": true
+    "notebook.output.scrolling": true,
+    "remote.autoForwardPortsSource": "hybrid",
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "workbench.productIconTheme": "jetbrains-product-icon-theme",
+    "workbench.iconTheme": "jetbrains-file-icon-theme-dark"
 }

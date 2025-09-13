@@ -41,6 +41,7 @@ This repo contains the dotfiles with my custon configs along with documentation 
 13. dust - Rust based disk space analyzer. Requires `cargo` to install -- `cargo install du-dust`. Use -r to show tree top to bottom.
 14. atuin - a better command history tool
 15. lazygit - brew install lazygit
+16. carapace - command completion lister
 ---
 ---
 
