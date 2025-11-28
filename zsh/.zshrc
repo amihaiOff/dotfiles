@@ -140,9 +140,6 @@ export EXA_COLORS="*.csv=36:*.parquet=32"
 # for poetry
 export PATH="/$HOME/.local/bin:$PATH"
 
-# add Pulumi to the PATH
-export PATH=$PATH:/$HOME/.pulumi/bin
-
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
@@ -197,10 +194,13 @@ export PYTHONPATH="$HOME/.cargo/bin:$PYTHONPATH"
 # this env var enables jj to print its pretty graphs
 export PAGER="less -r"
 
-source ~/autovenv.plugin.zsh
+# source ~/autovenv.plugin.zsh
 
 dotfiles_status
 
 # . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
+
+# temp fix 
+alias python=python3
