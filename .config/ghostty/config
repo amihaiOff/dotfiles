@@ -1,7 +1,7 @@
 # appearence 
 shell-integration-features = no-title
 macos-titlebar-style=hidden
-background-opacity = 0.75
+background-opacity = 0.85
 background-blur-radius = 20
 
 window-padding-x = 5 
@@ -16,3 +16,4 @@ auto-update-channel = stable
 keybind = global:opt+space=toggle_quick_terminal
 keybind = cmd+s>r=reload_config
 keybind = cmd+t=new_tab
+# keybind = shift+enter=text:\x1b\r

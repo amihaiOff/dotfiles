@@ -6,7 +6,7 @@ alias cache='cd /Users/amihaio/Documents/work/cache'
 alias b='bpytop'
 alias lz='lazygit'
 alias gen_shortcuts='glow ~/dotfiles/extra/general_shortcuts.md'
-alias dzyg='docker exec -it sharp_fermi zsh'
+alias dzyg='docker exec -it cool_jennings zsh'
 alias dai='docker exec -it dazzling_fermi zsh'
 
 

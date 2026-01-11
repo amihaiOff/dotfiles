@@ -204,3 +204,4 @@ eval "$(atuin init zsh)"
 
 # temp fix 
 alias python=python3
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"

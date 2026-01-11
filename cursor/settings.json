@@ -179,5 +179,6 @@
         "unpkg.com"
     ],
     "workbench.productIconTheme": "jetbrains-product-icon-theme",
-    "workbench.iconTheme": "jetbrains-file-icon-theme-dark"
+    "workbench.iconTheme": "jetbrains-file-icon-theme-dark",
+    "githubPullRequests.pullBranch": "never"
 }
