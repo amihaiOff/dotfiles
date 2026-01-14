@@ -103,10 +103,10 @@ Create a symlink for settings.json and keybindings.json in ~/Library/Application
 ## Zyg
 ### Install lazygit in devcontainer
 ** Make sure the curl command actually downloads the file **
-1. LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
-2. curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_arm64.tar.gz"
-3. tar xf lazygit.tar.gz lazygit
-4. install lazygit /usr/local/bin/
+1. `LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')`
+2. `curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_arm64.tar.gz"`
+3. `tar xf lazygit.tar.gz lazygit`
+4. `install lazygit /usr/local/bin/`
 
 
 ### Google mcp toolbox
