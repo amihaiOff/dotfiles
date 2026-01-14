@@ -99,3 +99,32 @@ For any file that already exists in the target folder the operation will fail.
 
 ## Cursor
 Create a symlink for settings.json and keybindings.json in ~/Library/Application Support/Cursor/User
+
+## Zyg
+### Install lazygit in devcontainer
+** Make sure the curl command actually downloads the file **
+1. LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+2. curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_arm64.tar.gz"
+3. tar xf lazygit.tar.gz lazygit
+4. install lazygit /usr/local/bin/
+
+
+### Google mcp toolbox
+1. Install go
+  1.1 `apt update`
+  1.2 `apt install golang-go`
+2. Get toolbox - `go install github.com/googleapis/genai-toolbox@v0.25.0` (note that the latest version might be different)
+3. Set execusion access `chmod +x` to toolbox file
+3. Copy toolbox file to container root with name toolbox
+4. Set mcp file - 
+```
+"bigquery": {
+            "command": "/workspace/ai/toolbox",
+            "args": ["--prebuilt", "bigquery", "--stdio"],
+            "env": {
+              "BIGQUERY_PROJECT": "zyg-ecom-prod"
+            }
+          }
+
+```
+5. Make sure to login to GCP from terminal `gcloud auth application-default login`
