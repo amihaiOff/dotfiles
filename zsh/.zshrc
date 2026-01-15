@@ -190,6 +190,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6e7f80'
 # Add my utils package to PYTHONPATH
 export PYTHONPATH="$HOME/my_utils:$PYTHONPATH"
 export PYTHONPATH="$HOME/.cargo/bin:$PYTHONPATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # this env var enables jj to print its pretty graphs
 export PAGER="less -r"

@@ -1,6 +1,7 @@
 # appearence 
 shell-integration-features = no-title
 macos-titlebar-style=hidden
+
 background-opacity = 0.85
 background-blur-radius = 20
 
