@@ -321,7 +321,57 @@
                         "product_id": 16403,
                         "vendor_id": 12625
                     },
-                    "ignore": false
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "consumer_key_code": "display_brightness_decrement" },
+                            "to": [{ "key_code": "f1" }]
+                        },
+                        {
+                            "from": { "consumer_key_code": "display_brightness_increment" },
+                            "to": [{ "key_code": "f2" }]
+                        },
+                        {
+                            "from": { "consumer_key_code": "fast_forward" },
+                            "to": [{ "key_code": "f9" }]
+                        },
+                        {
+                            "from": { "consumer_key_code": "mute" },
+                            "to": [{ "key_code": "f10" }]
+                        },
+                        {
+                            "from": { "consumer_key_code": "play_or_pause" },
+                            "to": [{ "key_code": "f8" }]
+                        },
+                        {
+                            "from": { "consumer_key_code": "rewind" },
+                            "to": [{ "key_code": "f7" }]
+                        },
+                        {
+                            "from": { "consumer_key_code": "volume_decrement" },
+                            "to": [{ "key_code": "f11" }]
+                        },
+                        {
+                            "from": { "consumer_key_code": "volume_increment" },
+                            "to": [{ "key_code": "f12" }]
+                        },
+                        {
+                            "from": { "key_code": "illumination_decrement" },
+                            "to": [{ "key_code": "f5" }]
+                        },
+                        {
+                            "from": { "key_code": "illumination_increment" },
+                            "to": [{ "key_code": "f6" }]
+                        },
+                        {
+                            "from": { "key_code": "launchpad" },
+                            "to": [{ "key_code": "f4" }]
+                        },
+                        {
+                            "from": { "key_code": "mission_control" },
+                            "to": [{ "key_code": "f3" }]
+                        }
+                    ]
                 },
                 {
                     "identifiers": {
@@ -334,6 +384,7 @@
                 }
             ],
             "name": "Default profile",
+            "selected": true,
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"
@@ -679,11 +730,20 @@
                         "product_id": 16403,
                         "vendor_id": 12625
                     },
-                    "ignore": false
+                    "ignore": false,
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_command" }]
+                        }
+                    ]
                 }
             ],
             "name": "epomaker th80 pro",
-            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
