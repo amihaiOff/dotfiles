@@ -1,23 +1,36 @@
-1. install watch
-   1. watch -u  ==> updates the commands
+# New-Mac setup
 
-2. install oh-my-zsh
-3. install starship
-   1. for ec2, doesn't need sudo `curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin -y`
-4. install exa
-5. install tidr  
-   1. download tldr pages (how?)
+## Quick start (automated)
+The whole environment is bootstrapped by one script:
 
+```
+git clone git@github.com:amihaiOff/dotfiles.git ~/dotfiles   # or via HTTPS
+~/dotfiles/setup_script.sh
+```
 
-3. clone dotfiles
-3.2 install stow
-3.3 create links for everything 
-3.4 copy change_instance_type.sh to root
+- `--dry-run`   — print every action without changing anything
+- `--force=<id>` — re-run a single step (ids: precheck, xcode-clt, homebrew,
+  brew-bundle, oh-my-zsh, zsh-plugins, version-managers, stow-symlinks,
+  cursor-config, extras, default-shell)
+- `--reset`     — forget progress and start from scratch
 
+The script is **resumable**: progress is saved to `~/.dotfiles_setup_state`, so
+if it crashes or you Ctrl-C, just run it again and it continues where it left off.
 
-4 install yazi
-  1. in ubuntu - 
-  2. install rust - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  3. enable cargo in shell -  . "$HOME/.cargo/env"
-  4. install yazi - cargo install --locked yazi-fm yazi-cli
+## What it does (dependency order)
+1. Verify `~/dotfiles` is cloned
+2. Xcode Command Line Tools → Homebrew
+3. `brew bundle` (CLI tools, casks, Nerd fonts, pyenv, uv, stow)
+4. Oh My Zsh → zsh plugins
+5. Version managers: pyenv, uv (brew) + nvm, poetry, rust/cargo (installers).
+   These run **before** symlinking `.zshrc`, which eval's them on startup.
+6. `stow` symlinks: `zsh/` + `vim/` → `$HOME`, `.config/*` → `~/.config`
+   (kitty excluded). Existing files are backed up to `~/.dotfiles-backup/`.
+7. Cursor settings/keybindings symlink, extras, default shell
 
+## Manual follow-ups (printed at the end)
+- Generate + add a GitHub SSH key (only for pushing/private repos)
+- Import the Raycast config; grant Karabiner/Lightshot permissions
+- Set the terminal font to a Nerd Font
+- Create `~/my_utils` if you use it (it's on PYTHONPATH)
+- `exec zsh` to reload

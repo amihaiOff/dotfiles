@@ -1,6 +1,12 @@
 # dotfiles and tools of the trade repo 
 This repo contains the dotfiles with my custon configs along with documentation of the tools I use
 
+## Setting up a new Mac
+Clone this repo to `~/dotfiles`, then run `./setup_script.sh`. It's resumable
+(safe to re-run after a crash) and dependency-ordered. See `setup_steps.md` for
+flags and the full step list. `brewfile` is the single source of truth for
+packages (`brew bundle`).
+
 ## Tools of the Trade - Mac
 1. Ghostty - terminal emulator
 2. [Lightshot](#Lightshot) - screenshots
