@@ -60,6 +60,7 @@ cask 'flux'                  # Blue-light filter
 cask 'lightshot'             # Screenshot tool
 cask 'adobe-acrobat-reader'  # PDF reader (free Reader; Acrobat Pro must be installed manually)
 cask 'claude'                # Anthropic Claude desktop app
+cask 'claude-code'           # Claude Code CLI
 cask 'slack'                 # Chat
 cask 'zoom'                  # Video calls
 cask 'spotify'               # Music
