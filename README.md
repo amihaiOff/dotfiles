@@ -48,6 +48,7 @@ packages (`brew bundle`).
 14. atuin - a better command history tool
 15. lazygit - brew install lazygit
 16. carapace - command completion lister
+17. [herdr](https://herdr.dev) - agent multiplexer that lives in your terminal
 ---
 ---
 

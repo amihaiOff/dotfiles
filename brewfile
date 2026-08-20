@@ -37,6 +37,7 @@ brew 'bpytop'       # Resource monitor (used by `b` alias)
 brew 'lazygit'      # Git TUI (used by `lz` alias)
 brew 'starship'     # Prompt (eval'd in .zshrc)
 brew 'atuin'        # Shell history (eval'd in .zshrc)
+brew 'herdr'        # Agent multiplexer that lives in your terminal
 
 # ── Version managers ─────────────────────────────────────────────────
 brew 'pyenv'        # Python version manager (eval'd in .zshrc)
