@@ -291,7 +291,7 @@ s_reminders() {
  Apps / config that need a GUI action:
    • Raycast   — import "Raycast 2025-03-31 11.40.23.rayconfig" (Raycast > Settings > Advanced > Import)
    • Karabiner — open Karabiner-Elements once and grant Input Monitoring / Accessibility
-   • Lightshot — grant Screen Recording; optionally remap ⌘⇧4
+   • Shottr    — grant Screen Recording; optionally remap ⌘⇧4
    • Terminal  — set the font to a Nerd Font (MesloLGS or CaskaydiaCove)
 
  Other:

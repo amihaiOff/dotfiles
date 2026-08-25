@@ -30,7 +30,7 @@ if it crashes or you Ctrl-C, just run it again and it continues where it left of
 
 ## Manual follow-ups (printed at the end)
 - Generate + add a GitHub SSH key (only for pushing/private repos)
-- Import the Raycast config; grant Karabiner/Lightshot permissions
+- Import the Raycast config; grant Karabiner/Shottr permissions
 - Set the terminal font to a Nerd Font
 - Create `~/my_utils` if you use it (it's on PYTHONPATH)
 - `exec zsh` to reload

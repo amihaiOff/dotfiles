@@ -58,7 +58,7 @@ cask 'sublime-text'          # Editor (on PATH via .zshrc)
 cask 'karabiner-elements'    # Keyboard remapper (config stowed to ~/.config/karabiner)
 cask 'raycast'               # Launcher (import the .rayconfig manually — see setup_script reminders)
 cask 'flux'                  # Blue-light filter
-cask 'lightshot'             # Screenshot tool
+cask 'shottr'                # Screenshot tool (measurement + annotation)
 cask 'adobe-acrobat-reader'  # PDF reader (free Reader; Acrobat Pro must be installed manually)
 cask 'claude'                # Anthropic Claude desktop app
 cask 'claude-code'           # Claude Code CLI
