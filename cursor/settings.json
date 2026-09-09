@@ -180,5 +180,10 @@
     ],
     "workbench.productIconTheme": "jetbrains-product-icon-theme",
     "workbench.iconTheme": "jetbrains-file-icon-theme-dark",
-    "githubPullRequests.pullBranch": "never"
+    "githubPullRequests.pullBranch": "never","remote.SSH.remotePlatform": {
+        "coder-vscode.34.165.221.141--amihai-zyg--branch-1.main": "linux"
+    },
+    "remote.SSH.connectTimeout": 1800,
+    "window.autoDetectColorScheme": false,
+    "claudeCode.preferredLocation": "panel"
 }
