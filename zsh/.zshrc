@@ -117,6 +117,8 @@ if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  fi
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 source $ZSH/oh-my-zsh.sh
 source ~/.custom_aliases.zsh
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -207,3 +209,6 @@ eval "$(atuin init zsh)"
 # temp fix 
 alias python=python3
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# Added by cua-driver-rs installer — see https://github.com/trycua/cua
+export PATH="/Users/amihaioffenbacher/.local/bin:$PATH"

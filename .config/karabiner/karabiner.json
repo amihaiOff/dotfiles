@@ -126,12 +126,12 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "caps + c = cursor",
+                                "description": "caps + c = claude",
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a cursor" }],
+                                "to": [{ "shell_command": "open -a Claude" }],
                                 "type": "basic"
                             },
                             {
@@ -153,21 +153,21 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "caps + a = arc",
+                                "description": "caps + a = dia",
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "osascript -e 'activate application \"arc\"'" }],
+                                "to": [{ "shell_command": "osascript -e 'activate application \"Dia\"'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "caps + h = hepta",
+                                "description": "caps + h = hermes",
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "osascript -e 'activate application \"heptabase\"'" }],
+                                "to": [{ "shell_command": "open -a Hermes" }],
                                 "type": "basic"
                             },
                             {
@@ -516,12 +516,12 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "caps + c = cursor",
+                                "description": "caps + c = claude",
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "open -a cursor" }],
+                                "to": [{ "shell_command": "open -a Claude" }],
                                 "type": "basic"
                             },
                             {
@@ -543,21 +543,21 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "caps + a = arc",
+                                "description": "caps + a = dia",
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "osascript -e 'activate application \"arc\"'" }],
+                                "to": [{ "shell_command": "osascript -e 'activate application \"Dia\"'" }],
                                 "type": "basic"
                             },
                             {
-                                "description": "caps + h = hepta",
+                                "description": "caps + h = hermes",
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": { "mandatory": ["right_command", "right_control", "right_shift", "right_option"] }
                                 },
-                                "to": [{ "shell_command": "osascript -e 'activate application \"heptabase\"'" }],
+                                "to": [{ "shell_command": "open -a Hermes" }],
                                 "type": "basic"
                             },
                             {
